@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% include 'heading.html' %}
+<form action="/saveuser/" method="post">
+    {% csrf_token %}
+<table>
+     <tr><td width="500"><font color="blue">
+
+<h3><a href="/Registration/"> User Registration</a></h3>
+<h3><a href="/signin/">Sign in </a></h3>
+     </font></td><br><br>
+         <th>
+<table><font color="#006400">
+    <tr><th>Bank_Name:</th><th><input type="text" name="bname"></th></tr>
+        <tr><th>Bank_AcNo:</th><th><input type="number" name="acno" >
+    <tr><th>Branch:</th><th><input type="text" name="branch" >
+    <tr><th>Profession:</th><th><input type="text" name = "prof"> </th></tr>
+        <tr><th>Security_doc:</th><th><input type="file" name="sec" >
+
+    <tr><th colspan="2"> <button type="submit">save</button></th> </tr>
+
+</table>
+<h2 align="center">{{ msg }} </h2></font>
+         </th></tr></table>
+
+</form>
+</body>
+</html>

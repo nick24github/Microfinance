@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% include 'heading.html' %}
+<table>
+    <tr>
+        <th width="200">
+<h3><a href="/user/"style="text-decoration: none; color: darkblue"> User</a></h3>
+            <h3><a href="/admin1/"style="text-decoration: none; color:darkblue">Admin</a></h3>
+            <h3> <a href="/manager/" style="text-decoration: none; color:darkblue">Manager</a></h3>
+</th>
+<br><br><br>
+        <td ><img src="{% static 'images/mf1.jpg' %}" width="1000" height="500"></td>
+    </tr>
+
+</table>
+</body>
+</html>

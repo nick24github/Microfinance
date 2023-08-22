@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% include 'heading.html' %}
+<form action="/register2/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table>
+     <tr><td width="500"><font color="blue">
+
+<h3><a href="/Registration/"> User Registration</a></h3>
+<h3><a href="/signin/">Sign in </a></h3>
+     </font></td><br><br>
+         <th><font color="#006400">
+<table>
+    <tr><th>Username:</th><th><input type="text" name="uname"></th></tr>
+        <tr><th>Password:</th><th><input type="password" name="password" >
+    <tr><th>confirm_password:</th><th><input type="password" name="cpassword" >
+    <tr><th>Gender:</th><th><input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <tr><th>Address:</th><th><input type="text" name="adress" >
+    <tr><th>Image:</th><th><input type="file" name="image" >
+        <tr><th>Email:</th><th><input type="email" name="email" >
+    <tr><th>contact number:</th><th><input type="number" name="cno" >
+        <tr><th>Loan type:</th><th><input type="text" name="loan" >
+   <tr><th colspan="2"> <button type="submit">Next</button></th> </tr>
+</table>
+{{ msg }}
+      </font>   </th></tr></table></form>
+</body>
+</html>

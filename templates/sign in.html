@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% include 'heading.html' %}
+<form action="/user_signin/" method="post">
+    {% csrf_token %}
+<table>
+     <tr><td width="500">
+
+<h3><a href="/Registration/"  style="text-decoration: none; color:darkblue"> User Registration</a></h3>
+<h3><a href="/signin/" style="text-decoration: none; color:darkblue">Sign in </a></h3>
+     </td><br><br>
+         <th><h2>User Sign In</h2>
+<table align="center">
+    <tr><th>Username:</th><th><input type="text" name="uname"></th></tr>
+        <tr><th>Password:</th><th><input type="password" name="password" ></th></tr>
+    <tr><th colspan="2"><button type="submit">Sign In</button> </th></tr>
+</table></th></tr></table>
+<h2 align="center">{{ data }}</h2>
+</form>
+</body>
+</html>

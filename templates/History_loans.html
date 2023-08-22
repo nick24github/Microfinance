@@ -1,0 +1,36 @@
+{% load staticfiles %}
+
+{% include 'heading.html' %}
+<font color="#006400">
+<form  method="post">
+    {% csrf_token %}
+
+<table ><tr><th width="500">{% include 'signin_sideindex.html' %}</th>
+<th><table  border="1">
+    <tr>
+    <th>UserName</th>
+    <th>Loan id</th>
+    <th>loan amount</th>
+    <th>Type of Loan</th>
+    <th>No of Installments</th>
+    <th>Installmet amount</th>
+    <th>Payment Date</th>
+    </tr>
+    {% for x in data %}
+         <tr>
+    <th>{{ x.un }}</th>
+    <th>{{ x.loan_id }}</th>
+    <th>{{ x.loan_amnt }}</th>
+    <th>{{ x.loan_type }}</th>
+    <th>{{ x.insta_no }}</th>
+    <th>{{ x.insta_amnt }}</th>
+    <th>{{ x.pay_date }}</th>
+    </tr>
+    {% endfor %}
+</table></th></tr>
+</table>
+</form>
+</font>
+
+</body>
+</html>

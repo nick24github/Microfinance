@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+{% include 'heading.html' %}
+<font color="#006400">
+<form method="post" enctype="multipart/form-data">
+<table ><tr><th width="300">{% include 'admin_sideindex.html' %}</th><br><br>
+<th>
+
+<table align="center" border="2">
+    <tr>
+       <th>userid</th>
+<th>username</th>
+<th>password</th>
+<th>gender</th>
+<th>address</th>
+<th>Image</th>
+<th>email</th>
+<th>cno</th>
+        <th>loan type</th>
+
+
+    </tr>
+
+    {% for x in object_list %}
+         <tr>
+         <th width="100">{{ x.id }}</th>
+        <th width="100">{{ x.Username }}</th>
+        <th width="100">{{ x.Password }}</th>
+        <th width="100">{{ x.Gender }}</th>
+        <th width="100">{{ x.Address }}</th>
+        <th width="100"><img src="{{ x.Image.url }}" width="50" height="50"> </th>
+        <th width="100">{{ x.Email }}</th>
+        <th width="100">{{ x.phone_number }}</th>
+        <th width="100">{{ x.loantype }}</th>
+    </tr>
+    {% endfor %}
+</table></th></tr></table></form></font>

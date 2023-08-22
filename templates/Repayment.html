@@ -1,0 +1,20 @@
+{% load staticfiles %}
+
+{% include 'heading.html' %}
+<font color="#006400">
+    <form method="post">
+        {% csrf_token %}
+<table ><tr><th width="500">{% include 'signin_sideindex.html' %}</th>
+<th><table  border="0">
+    {{ form }}
+<tr><th colspan="2"><button type="submit">Submit</button> </th></tr>
+
+</table></th></tr></table>
+
+
+</form>
+{% for x in messages %}
+    {{ x }}
+{% endfor %}
+
+</font>

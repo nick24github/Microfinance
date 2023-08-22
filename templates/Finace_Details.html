@@ -1,0 +1,22 @@
+{% load staticfiles %}
+
+{% include 'heading.html' %}
+<font color="#006400">
+<table ><tr><th width="500">{% include 'admin_sideindex.html' %}</th>
+<th><table  border="1">
+    <tr><th>Organisation_name</th>
+    <th>Issue_Amount</th>
+    <th>Organisation_type</th></tr>
+    {% for x in object_list %}
+        <tr>
+        <th>{{ x.org_name }}</th>
+        <th>{{ x.issue_amnt }}</th>
+        <th>{{ x.org_type }}</th>
+        </tr>
+    {% endfor %}
+</table></th></tr>
+</table>
+</font>
+
+</body>
+</html>

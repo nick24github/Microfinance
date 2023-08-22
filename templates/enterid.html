@@ -1,0 +1,14 @@
+{% load staticfiles %}
+
+{% include 'heading.html' %}
+<font color="#006400">
+   <form action="/userfilter/" method="post">
+        {% csrf_token %}
+
+<table><tr><th width="500">{% include 'signin_sideindex.html' %}</th>
+
+
+    <th>Enter Id:</th><th><input type="number" required name="id"> </th>
+    <th><button type="submit">Submit</button> </th></tr></table>
+       <h1 align="center"> {{ msg }}</h1></form></font>
+
